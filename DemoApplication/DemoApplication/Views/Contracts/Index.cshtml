@@ -1,0 +1,69 @@
+﻿@model IEnumerable<DemoApplication.Models.Contract>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Employees.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contents)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConstractType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SignDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Create)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employees.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contents)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConstractType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SignDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Create)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ContractId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ContractId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ContractId })
+        </td>
+    </tr>
+}
+
+</table>

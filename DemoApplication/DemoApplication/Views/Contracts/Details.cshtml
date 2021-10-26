@@ -1,0 +1,74 @@
+﻿@model DemoApplication.Models.Contract
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contract</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Employees.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employees.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contents)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contents)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConstractType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConstractType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SignDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SignDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Create)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Create)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ContractId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
