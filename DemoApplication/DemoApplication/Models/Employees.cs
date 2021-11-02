@@ -23,6 +23,7 @@ namespace DemoApplication.Models
         public int Rank { get; set; }
         [StringLength(1000)]
         public string Description { get; set; }
+        [DataType(DataType.Date)]
         public DateTime Create { get; set; }
         public string CreatedBy { get; set; }
 

@@ -13,11 +13,14 @@ namespace DemoApplication.Models
         [StringLength(100)]
         public string Name { get; set; }
         public int TeamSize { get; set; }
+        [DataType(DataType.Date)]
         public DateTime StartDate { get; set; }
+        [DataType(DataType.Date)]
         public DateTime EndDate { get; set; }
         [StringLength(10)]
         public string Status { get; set; }
         public Boolean IsActive { get; set; }
+        [DataType(DataType.Date)]
         public DateTime Create { get; set; }
         public string CreatedBy { get; set; }
         [StringLength(1000)]

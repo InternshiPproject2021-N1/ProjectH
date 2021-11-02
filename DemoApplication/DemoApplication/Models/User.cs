@@ -16,6 +16,7 @@ namespace DemoApplication.Models
         [StringLength(100)]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+        [DataType(DataType.Date)]
         public DateTime Create { get; set; }
         public string CreatedBy { get; set; }
         [StringLength(1000)]

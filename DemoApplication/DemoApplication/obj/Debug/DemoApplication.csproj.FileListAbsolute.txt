@@ -76,7 +76,6 @@ E:\Work\Demo\DemoApplication\DemoApplication\bin\System.Web.WebPages.Razor.xml
 E:\Work\Demo\DemoApplication\DemoApplication\bin\Newtonsoft.Json.xml
 E:\Work\Demo\DemoApplication\DemoApplication\bin\Antlr3.Runtime.pdb
 E:\Work\Demo\DemoApplication\DemoApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\Work\Demo\DemoApplication\DemoApplication\obj\Debug\DemoApplication.csproj.AssemblyReference.cache
 E:\Work\Demo\DemoApplication\DemoApplication\obj\Debug\DemoApplication.csproj.CoreCompileInputs.cache
 E:\Work\Demo\DemoApplication\DemoApplication\obj\Debug\DemoApplication.csproj.CopyComplete
 E:\Work\Demo\DemoApplication\DemoApplication\obj\Debug\DemoApplication.dll
@@ -235,3 +234,10 @@ E:\Work\Demo\DemoApplication\DemoApplication\bin\System.Reflection.Metadata.xml
 E:\Work\Demo\DemoApplication\DemoApplication\bin\System.Runtime.CompilerServices.Unsafe.xml
 E:\Work\Demo\DemoApplication\DemoApplication\bin\System.Text.Encodings.Web.xml
 E:\Work\Demo\DemoApplication\DemoApplication\bin\System.Threading.Tasks.Extensions.xml
+E:\Work\Demo\DemoApplication\DemoApplication\obj\Debug\DemoApplication.Migrations.datatypeDate.resources
+E:\Work\Demo\DemoApplication\DemoApplication\obj\Debug\DemoApplication.Migrations.updaterela.resources
+E:\Work\Demo\DemoApplication\DemoApplication\obj\Debug\DemoApplication.Migrations.updaterela2.resources
+E:\Work\Demo\DemoApplication\DemoApplication\obj\Debug\DemoApplication.Migrations.updaterela3.resources
+E:\Work\Demo\DemoApplication\DemoApplication\obj\Debug\DemoApplication.Migrations.updaterela5.resources
+E:\Work\Demo\DemoApplication\DemoApplication\obj\Debug\DemoApplication.csproj.AssemblyReference.cache
+E:\Work\Demo\DemoApplication\DemoApplication\obj\Debug\DemoApplication.Migrations.updatedb.resources

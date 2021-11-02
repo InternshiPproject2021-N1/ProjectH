@@ -19,7 +19,7 @@ namespace DemoApplication.Controllers
         public ActionResult Index(string search)
         {
             List<Employees> listemp = db.Employeess.ToList();
-            return View(db.Employeess.Where(x=>x.Name.StartsWith(search) || search==null).ToList());
+            return View(db.Employeess.Where(x=>x.Name.Contains(search) || x.Address.Contains(search) || x.Email.Contains(search) || x.Description.Contains(search) || x.CreatedBy.Contains(search) || search==null).ToList());
         }
 
         // GET: Employees/Details/5
@@ -80,7 +80,7 @@ namespace DemoApplication.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "EmpId,Name,Address,Email,Age,Status,IsActive,Rank,Description,Create,CreatedBy")] Employees employees)
+        public ActionResult Edit([Bind(Include = "EmpId,Name,Address,Email,Age,Status,IsActive,Rank,Description,Create,CreatedBy")] Employees employees,[Bind(Include ="ProjectId,EmpId,StartDate,EndDate")] ProjectDetail projectDetails)
         {
             if (ModelState.IsValid)
             {

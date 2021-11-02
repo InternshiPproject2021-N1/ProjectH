@@ -15,9 +15,10 @@ namespace DemoApplication.Controllers
         private DemoApplicationDbContext db = new DemoApplicationDbContext();
 
         // GET: Projects
-        public ActionResult Index()
+        public ActionResult Index(string search)
         {
-            return View(db.Projects.ToList());
+            List<Project> listemp = db.Projects.ToList();
+            return View(db.Projects.Where(x => x.Name.Contains(search) || x.Status.Contains(search) || x.CreatedBy.Contains(search) || x.Description.Contains(search) || search == null).ToList());
         }
 
         // GET: Projects/Details/5

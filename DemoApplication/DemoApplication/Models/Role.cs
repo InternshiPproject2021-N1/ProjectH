@@ -9,9 +9,10 @@ namespace DemoApplication.Models
     public class Role
     {
         [Key]
-        public string RoleId { get; set; }
+        public int RoleId { get; set; }
         [StringLength(100)]
         public string Name { get; set; }
+        [DataType(DataType.Date)]
         public DateTime Create { get; set; }
         public string CreatedBy { get; set; }
         [StringLength(1000)]

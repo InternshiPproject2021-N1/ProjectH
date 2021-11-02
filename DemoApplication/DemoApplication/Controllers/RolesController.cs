@@ -15,13 +15,14 @@ namespace DemoApplication.Controllers
         private DemoApplicationDbContext db = new DemoApplicationDbContext();
 
         // GET: Roles
-        public ActionResult Index()
+        public ActionResult Index(string search)
         {
-            return View(db.Roles.ToList());
+            List<Role> listemp = db.Roles.ToList();
+            return View(db.Roles.Where(x=>x.Name.Contains(search) || x.CreatedBy.Contains(search) || x.Description.Contains(search) || search==null ).ToList());
         }
 
         // GET: Roles/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -59,7 +60,7 @@ namespace DemoApplication.Controllers
         }
 
         // GET: Roles/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -90,7 +91,7 @@ namespace DemoApplication.Controllers
         }
 
         // GET: Roles/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
@@ -107,7 +108,7 @@ namespace DemoApplication.Controllers
         // POST: Roles/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
             Role role = db.Roles.Find(id);
             db.Roles.Remove(role);
