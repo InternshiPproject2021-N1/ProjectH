@@ -241,3 +241,9 @@ E:\Work\Demo\DemoApplication\DemoApplication\obj\Debug\DemoApplication.Migration
 E:\Work\Demo\DemoApplication\DemoApplication\obj\Debug\DemoApplication.Migrations.updaterela5.resources
 E:\Work\Demo\DemoApplication\DemoApplication\obj\Debug\DemoApplication.csproj.AssemblyReference.cache
 E:\Work\Demo\DemoApplication\DemoApplication\obj\Debug\DemoApplication.Migrations.updatedb.resources
+E:\Work\Demo\DemoApplication\DemoApplication\bin\System.Net.Http.Formatting.dll
+E:\Work\Demo\DemoApplication\DemoApplication\bin\System.Web.Http.dll
+E:\Work\Demo\DemoApplication\DemoApplication\bin\System.Web.Http.WebHost.dll
+E:\Work\Demo\DemoApplication\DemoApplication\bin\System.Net.Http.Formatting.xml
+E:\Work\Demo\DemoApplication\DemoApplication\bin\System.Web.Http.xml
+E:\Work\Demo\DemoApplication\DemoApplication\bin\System.Web.Http.WebHost.xml

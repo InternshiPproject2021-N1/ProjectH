@@ -4,6 +4,25 @@
     ViewBag.Title = "Create";
 }
 
+@{
+    List<SelectListItem> listItems = new List<SelectListItem>();
+    listItems.Add(new SelectListItem
+    {
+        Text = "Is Working",
+        Value = "Is Working"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Non Working",
+        Value = "Non Working"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Close",
+        Value = "Close"
+    });
+}
+
 <h2>Create</h2>
 
 
@@ -50,26 +69,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10 list">
-                @{
-                    List<SelectListItem> listItems = new List<SelectListItem>();
-                    listItems.Add(new SelectListItem
-                    {
-                        Text = "Is Working",
-                        Value = "Is Working"
-                    });
-                    listItems.Add(new SelectListItem
-                    {
-                        Text = "Non Working",
-                        Value = "Non Working"
-                    });
-                    listItems.Add(new SelectListItem
-                    {
-                        Text = "Close",
-                        Value = "Close"
-                    });
-                }
-                
-                @Html.DropDownListFor(model => model.Status, listItems, "--Select Status--" )
+                @Html.DropDownListFor(model => model.Status, listItems, "--Select Status--", new { @class = "form-control" })
                 @* @Html.EditorFor(model => model.Status, new { htmlAttributes = new { @class = "form-control" } }) *@
                 @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
             </div>
