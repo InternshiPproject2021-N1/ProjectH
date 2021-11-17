@@ -145,12 +145,23 @@ namespace DemoApplication.Controllers
         /// <returns></returns>  
         public JsonResult Get_AllEmployee()
         {
-            using (DemoApplicationDbContext Obj = new DemoApplicationDbContext())
+            List<Employees> Emp = new List<Employees>();
+            try
             {
-                List<Employees> Emp = Obj.Employeess.ToList();
-                return Json(Emp, JsonRequestBehavior.AllowGet);
+                using (DemoApplicationDbContext Obj = new DemoApplicationDbContext())
+                {
+                    Emp = Obj.Employeess.ToList();
+                    
+                }
             }
+            catch (Exception ex)
+            {
+                var logBug = ex.Message;
+            }
+
+            return Json(Emp, JsonRequestBehavior.AllowGet);
         }
+       
         /// <summary>  
         /// Get Employee With Id  
         /// </summary>  

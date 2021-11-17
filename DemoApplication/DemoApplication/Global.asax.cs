@@ -17,7 +17,7 @@ namespace DemoApplication
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            GlobalConfiguration.Configure(RouteConfig.Register);
+/*            GlobalConfiguration.Configure(RouteConfig.Register);*/
         }
     }
 }

@@ -20,20 +20,6 @@ namespace DemoApplication
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
-
-        public static void Register(HttpConfiguration config)
-        {
-            // Web API configuration and services
-
-            // Attribute based routing
-            config.MapHttpAttributeRoutes();
-
-            //Default web api route
-            config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
-        }
+        
     }
 }

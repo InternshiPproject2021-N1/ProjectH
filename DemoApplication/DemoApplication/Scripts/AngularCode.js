@@ -46,7 +46,7 @@ app.controller("myCtrl", function ($scope, $http) {
     $scope.GetAllData = function () {
         $http({
             method: "get",
-            url: "http://localhost:44342/Employees/Get_AllEmployee"
+            url: "https://localhost:44342/Employees/Get_AllEmployee",
         }).then(function (response) {
             $scope.employees = response.data;
         }, function () {
