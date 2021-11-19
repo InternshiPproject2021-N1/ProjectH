@@ -10,7 +10,7 @@ namespace DemoApplication.Models
     {
         public DemoApplicationDbContext() : base("DemoApplicationDb")
         {
-
+            this.Configuration.LazyLoadingEnabled = false;
         }
 
         public DbSet<Employees> Employeess { get; set; }

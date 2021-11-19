@@ -1,24 +1,38 @@
 ﻿var app = angular.module("myApp", []);
 app.controller("myCtrl", function ($scope, $http) {
-    debugger;
-/*    $scope.InsertData = function () {
+    $scope.InsertData = function () {
         var Action = document.getElementById("btnSave").getAttribute("value");
         if (Action == "Submit") {
-            $scope.Employe = {};
-            $scope.Employe.EmpName = $scope.EmpName;
-            $scope.Employe.EmpAddress = $scope.EmpAddress;
-            $scope.Employe.EmpEmail = $scope.EmpEmail;
+            $scope.employes = {};
+            $scope.employes.Name = $scope.EmpName;
+            $scope.employes.Address = $scope.EmpAddress;
+            $scope.employes.Email = $scope.EmpEmail;
+            $scope.employes.Age = $scope.EmpAge;
+            $scope.employes.Status = $scope.EmpStatus;
+            $scope.employes.IsActive = $scope.EmpIsActive;
+            $scope.employes.Rank = $scope.EmpRank;
+            $scope.employes.Description = $scope.EmpDescription;
+            $scope.employes.Create = $scope.EmpCreate;
+            $scope.employes.CreatedBy = $scope.EmpCreatedBy;
             $http({
                 method: "post",
-                url: "http://localhost:39209/Employee/Insert_Employee",
+                url: "https://localhost:44324/Employees/Insert_Employee",
                 datatype: "json",
-                data: JSON.stringify($scope.Employe)
+                data: JSON.stringify($scope.Employees)
             }).then(function (response) {
                 alert(response.data);
                 $scope.GetAllData();
                 $scope.EmpName = "";
                 $scope.EmpAddress = "";
                 $scope.EmpEmail = "";
+                $scope.EmpAge = "";
+                $scope.EmpStatus = "";
+                $scope.EmpIsActive = "";
+                $scope.EmpRank = "";
+                $scope.EmpDescription = "";
+                $scope.EmpCreate = "";
+                $scope.EmpCreatedBy = "";
+
             })
         } else {
             $scope.Employe = {};
@@ -42,14 +56,14 @@ app.controller("myCtrl", function ($scope, $http) {
                 document.getElementById("spn").innerHTML = "Add New Employee";
             })
         }
-    }*/
+    }
     $scope.GetAllData = function () {
         $http({
             method: "get",
             url: "https://localhost:44342/Employees/Get_AllEmployee",
         }).then(function (response) {
             $scope.employees = response.data;
-        }, function () {
+        }, function (e) {
             alert("Error Occur");
         })
     };

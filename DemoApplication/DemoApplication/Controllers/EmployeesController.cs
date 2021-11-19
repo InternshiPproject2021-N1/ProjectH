@@ -180,13 +180,13 @@ namespace DemoApplication.Controllers
         /// </summary>  
         /// <param name="Employe"></param>  
         /// <returns></returns>  
-        public string Insert_Employee(Employees Employes)
+        public string Insert_Employee(Employees employes)
         {
-            if (Employes != null)
+            if (employes != null)
             {
                 using (DemoApplicationDbContext Obj = new DemoApplicationDbContext())
                 {
-                    Obj.Employeess.Add(Employes);
+                    Obj.Employeess.Add(employes);
                     Obj.SaveChanges();
                     return "Employee Added Successfully";
                 }
